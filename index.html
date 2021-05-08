@@ -5,27 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Music Player</title>
-    <script defer src="./js/index.js" />
+    <script defer src="./js/index.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="music-header">
-      <h2 class="title">
+      <h1 class="title">
         Music Player
-      </h2>
+      </h1>
     </div>
     <div class="music-player-container">
       <div class="img-container">
-        <img id="cover" class="play" src="./assests/highest.jpg" alt="" />
+        <img
+          src="./images/Maroon 5 SZA - What Lovers Do.jpg"
+          alt="Coldplay"
+          id="cover"
+        />
       </div>
       <div class="player-box">
         <div class="song-details">
           <p class="song-title">Sky Full of Starts</p>
-          <audio src="./assests/A hEAD Full of Dreams.mp3">
+          <audio
+            id="audio"
+            src="./music/Coldplay - A Sky Full Of Stars.mp3"
+          ></audio>
         </div>
         <div class="progress-box">
           <div id="progress" class="progress-bar"></div>
