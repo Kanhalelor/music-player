@@ -24,7 +24,7 @@ let songs = [
 
 //  functions
 
-// load song
+// load songs
 const loadSongs = (song) => {
   audio.src = `./music/${song}.mp3`;
   songTitle.innerText = song;
@@ -76,28 +76,13 @@ const playNextSong = () => {
 };
 
 // Update progress bar
-// const updateSongTime = (e) => {
-//   const { songDuration, currentTime } = e.srcElemnt;
-//   const percent = (currentTime / songDuration) * 100;
-//   progressBar.style.width = `${percent}%`;
-//   console.log("Debugging");
-// };
-
-// const setProgressPercent = (e) => {
-//   const width = this.clientWidth;
-//   const clickX = e.offsetX;
-//   const duration = audio.duration;
-
-//   audio.currentTime = (clickX / width) * duration;
-// };
-// Update progress bar
 const updateProgressBar = (e) => {
   const { duration, currentTime } = e.srcElement;
   const percent = (currentTime / duration) * 100;
   progressBar.style.width = `${percent}%`;
 };
 
-// Set progress bar
+// update songDuration
 function setProgressBar(e) {
   const width = this.clientWidth;
   const clickX = e.offsetX;
@@ -109,7 +94,7 @@ function setProgressBar(e) {
 // invoke functions
 loadSongs(songs[currentSong]);
 
-// Event listeners
+// Events
 playBtn.addEventListener("click", () => {
   const isPlaying = musicImgBox.classList.contains("play");
 
@@ -128,3 +113,5 @@ audio.addEventListener("timeupdate", updateProgressBar);
 progressBox.addEventListener("click", setProgressBar);
 
 audio.addEventListener("ended", playNextSong);
+
+// ----------------------------------------------------------------------------   (*_*) ----------------------------------------------------------------- \\
